@@ -7,5 +7,4 @@ def detail(request, id):
     return render(request, "meetings/detail.html", {"meeting": meeting})
 
 def rooms(request):
-    rooms = Room.objects.all()
-    return render(request, "meetings/rooms.html", {"rooms": rooms})
+    return render(request, "meetings/rooms.html", {"rooms": Room.objects.all()})
